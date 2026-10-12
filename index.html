@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+</head>
+<body>
 <title>The Huddle Playbook</title>
 <meta name="description" content="Huddle, a group outing planner for LINE friend groups, and the full product design case study behind it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -302,7 +310,8 @@ details.acc[open] summary{color:var(--cobalt)}
 .mx td,.mx th{text-align:center;white-space:nowrap}
 .mx td:first-child,.mx th:first-child{text-align:left}
 .mx tr.us td{background:var(--tint);font-weight:700}
-.mx .c{font-size:16px}
+.mx .c{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:middle;font-size:0}
+.mx .c.full{background:var(--cobalt)}.mx .c.half{background:linear-gradient(90deg,var(--tangerine) 50%,transparent 50%);box-shadow:inset 0 0 0 2px var(--tangerine)}.mx .c.none{box-shadow:inset 0 0 0 2px var(--line)}
 .mx .c.full{color:var(--cobalt)}.mx .c.half{color:var(--tangerine)}.mx .c.none{color:var(--line)}
 .mx tbody tr:hover td{background:var(--bg)}
 .mx tr.us:hover td{background:var(--tint)}
@@ -1250,26 +1259,25 @@ details.peek>*:not(summary){margin-top:14px}
     <p class="say"><span class="me" aria-hidden="true">bi</span><span class="bub">11 products, grouped by the job they do.</span></p>
   </div>
   <div class="block" style="margin-top:0">
-    <h3 class="h3" id="ideate-0">Feature matrix  <div class="block">
-    <h3 class="h3" id="ideate-1">Feature matrix: the six jobs from Define</h3>
+    <h3 class="h3" id="ideate-0">Feature matrix: the six jobs from Define</h3>
     <div class="tscroll"><table class="mx">
       <thead><tr><th>Product</th><th>Free time</th><th>Who's in</th><th>Nudges</th><th>Deadline + lock</th><th>Hours + cost</th><th>Reply from LINE</th></tr></thead>
       <tbody id="mxBody"></tbody>
     </table></div>
-    <p class="muted" style="font-size:13px;margin-top:10px">● yes · ◐ partly · ○ no. Best competitor: 2 of 6.</p>
+    <p class="muted mxkey" style="font-size:13px;margin-top:10px"><span class="mx"><span class="c full"></span></span> yes · <span class="mx"><span class="c half"></span></span> partly · <span class="mx"><span class="c none"></span></span> no. Best competitor covers 2 of 6.</p>
   </div>
 
   <div class="block grid2" style="align-items:center">
     <div class="card pos"><svg viewBox="0 0 440 360" id="posmap" role="img" aria-label="Positioning map: who decides versus what it knows. Top right, group co-decides and knows the place, is empty except Huddle."></svg></div>
     <div style="display:grid;gap:14px">
-      <h3 class="h3" id="ideate-2" style="margin:0">The empty corner</h3>
+      <h3 class="h3" id="ideate-1" style="margin:0">The empty corner</h3>
       <p>Group decides <i>and</i> knows the place: nobody was there.</p>
       <p class="muted">Borrowed: no-signup join, guest list, reminders, LINE's ○ △ ✕.</p>
     </div>
   </div>
 
   <div class="block">
-    <h3 class="h3" id="ideate-3">15 ideas → 9 features → 5 Musts</h3>
+    <h3 class="h3" id="ideate-2">15 ideas → 9 features → 5 Musts</h3>
     <p class="muted" style="margin-bottom:16px">Merged by screen, scored 1–5 on need, impact, feasibility and difference.</p>
     <div class="moscow">
       <div class="mcol must"><header>Must · 5<span>The happy flow fails without it</span></header><ul>
@@ -1290,7 +1298,7 @@ details.peek>*:not(summary){margin-top:14px}
 
   <div class="block grid2" style="align-items:start">
     <div style="display:grid;gap:14px">
-      <h3 class="h3" id="ideate-4" style="margin:0">One flow, two plan types</h3>
+      <h3 class="h3" id="ideate-3" style="margin:0">One flow, two plan types</h3>
       <p>Place first like the brief, but the time step does the heavy lifting.</p>
       <p class="muted">Multi-day: cut, then back as a branch. Day outing is the focus.</p>
       <div class="callout"><h4>Riskiest assumption</h4><p>Friends reply from LINE without installing.</p></div>
@@ -1948,3 +1956,6 @@ document.addEventListener('click',e=>{ if(!e.target.closest('.ev,.pop')) pop.hid
 
 })();
 </script>
+
+</body>
+</html>
